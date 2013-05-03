@@ -1,6 +1,8 @@
 # Haberdasher
 
-TODO: Write a gem description
+Decorators for your plain old Ruby apps or legacy Rails (around 2.3.5) apps.
+
+[![Code Climate](https://codeclimate.com/github/kchien/haberdasher.png)](https://codeclimate.com/github/kchien/haberdasher)
 
 ## Installation
 
