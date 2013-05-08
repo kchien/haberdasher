@@ -1,6 +1,6 @@
 # Haberdasher
 
-[![Code Climate](https://codeclimate.com/github/kchien/haberdasher.png)](https://codeclimate.com/github/kchien/haberdasher)
+[![Dependency Status](https://gemnasium.com/kchien/haberdasher.png)](https://gemnasium.com/kchien/haberdasher) [![Code Climate](https://codeclimate.com/github/kchien/haberdasher.png)](https://codeclimate.com/github/kchien/haberdasher)
 
 Decorator library providing a [draper](https://github.com/drapergem/draper) style API for Rails 2.3.5 apps. 
 
