@@ -1,12 +1,14 @@
 # Haberdasher
 
-Decorators for your plain old Ruby apps or legacy Rails (around 2.3.5) apps.
-
 [![Code Climate](https://codeclimate.com/github/kchien/haberdasher.png)](https://codeclimate.com/github/kchien/haberdasher)
+
+Decorator library providing a [draper](https://github.com/drapergem/draper) style API for Rails 2.3.5 apps. 
 
 ## Installation
 
-Add this line to your application's Gemfile:
+### Rails 2.3.x
+
+If you're using [bundler](http://gembundler.com/), then add this line to your application's Gemfile:
 
     gem 'haberdasher'
 
@@ -14,9 +16,12 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+If you're not using bundler: 
 
-    $ gem install haberdasher
+<pre>
+# in config/environment.rb
+config.gem "haberdasher"
+</pre>
 
 ## Usage
 
