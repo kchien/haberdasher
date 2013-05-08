@@ -9,6 +9,9 @@ module Haberdasher
         attr_accessor :color
       end
 
+      class Cat; end
+      class CatDecorator < Haberdasher::Decorator; end
+
       it "will respond to :decorate" do
         expect {
           Apple.send :include, Haberdasher::Decoratoratable
@@ -16,6 +19,11 @@ module Haberdasher
         .to change { Apple.new.respond_to? :decorate }\
         .from(false)\
         .to(true)
+      end
+
+      it "finds its decorator class by naming convention" do
+        Cat.send :include, Haberdasher::Decoratoratable
+        Cat.new.decorate.should be_a CatDecorator
       end
     end
 
