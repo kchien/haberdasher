@@ -27,7 +27,37 @@ config.gem "haberdasher"
 
 ## Usage
 
-TODO: Write usage instructions here
+## Writing Decorators
+
+Similar to draper, decorators inherit from `Haberdasher::Decorator`, live in your `app/decorators`
+directory, and are named for the model that they decorate:
+
+```ruby
+# app/decorators/article_decorator.rb
+class ArticleDecorator < Haberdasher::Decorator
+# ...
+end
+```
+## Using Decorators
+
+### Use `#decorate`
+For the time being, explicitly `#include` the `Haberdasher::Decoratoratable` in your model:
+
+```ruby
+# app/models/article.rb
+class Article < ActiveRecord::Base
+  include Haberdasher::Decoratoratable
+  #other methods....
+end
+```
+
+### Or use the decorator explicitly without mixing any modules in
+``` ruby
+# app/controllers/articles_controller.rb
+  def show
+    @article = ArticleDecorator.new Article.find params[:id]
+  end
+```
 
 ## Contributing
 

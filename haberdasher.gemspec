@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["ken.chien@gmail.com"]
   spec.description   = %q{Decorators for your models}
   spec.summary       = %q{haberdasher is inspired by the excellent draper gem.
-  Its initial goal is to support legacy apps written in Rails 2.3.5, and possibly in the future,
-  more recent versions of Rails as well.
+  Its goal is to support legacy apps written in Rails 2.3.x, starting from 
+  Rails 2.3.5.
   }
   spec.homepage      = "https://github.com/kchien/haberdasher"
   spec.license       = "MIT"
