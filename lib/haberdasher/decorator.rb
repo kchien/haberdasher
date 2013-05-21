@@ -1,5 +1,7 @@
 module Haberdasher
-  class Decorator
+  class Decorator < BasicObject
+    undef_method :==
+
     attr_reader :model
 
     def initialize model
@@ -8,6 +10,10 @@ module Haberdasher
 
     def method_missing method, *args, &block
       model.send method, *args, &block
+    end
+
+    def send(symbol, *args)
+      __send__(symbol, *args)
     end
   end
 end

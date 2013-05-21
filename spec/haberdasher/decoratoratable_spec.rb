@@ -21,9 +21,9 @@ module Haberdasher
         .to(true)
       end
 
-      it "finds its decorator class by naming convention" do
+      it "keeps the same class even though it's decorated" do
         Cat.send :include, Haberdasher::Decoratoratable
-        Cat.new.decorate.should be_a CatDecorator
+        Cat.new.decorate.should be_a Cat
       end
     end
 
